@@ -1,0 +1,16 @@
+{
+  "name": "the-wonderful-octopus",
+  "version": "1.1.0",
+  "description": "SVG and SCSS",
+  "main": "index.html",
+  "dependencies": {
+    "local-web-server": "^4.0.0",
+    "node-sass": "^4.13.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sean Roughton",
+  "license": "ISC"
+}

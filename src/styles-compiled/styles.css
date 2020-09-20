@@ -1,0 +1,163 @@
+h1 {
+  color: green;
+}
+
+.left-arm-1 {
+  transform-origin: center center;
+  animation: tentacle1 2s 0.6s infinite alternate;
+}
+@keyframes tentacle1 {
+  0% {
+    transform: rotateZ(3deg);
+  }
+  100% {
+    transform: rotateZ(-12deg);
+  }
+}
+
+.left-arm-2 {
+  transform-origin: center center;
+  animation: tentacle1 2s 0.6s infinite alternate;
+}
+@keyframes tentacle1 {
+  0% {
+    transform: rotateZ(3deg);
+  }
+  100% {
+    transform: rotateZ(-12deg);
+  }
+}
+
+.upper-tentacle {
+  transform-origin: center center;
+  animation: tentacle1 2s infinite alternate;
+}
+@keyframes tentacle1 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(-12deg);
+  }
+}
+
+.upper-tentacle-right {
+  transform-origin: center center;
+  animation: tentacle1 2s 0.7s infinite alternate;
+}
+@keyframes tentacle1 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(-7deg);
+  }
+}
+
+/*
+@keyframes tentacle1 {
+  //   0% {
+  //     transform: rotateZ(0deg);
+  //   }
+
+  //   33% {
+  //     transform: rotateZ(3deg);
+  //   }
+  //   66% {
+  //     transform: rotateZ(-12deg);
+  //   }
+  //   100% {
+  //     tranform: rotateZ(0deg);
+  //   }
+  from {
+    transform: rotateZ(3deg);
+  }
+
+  to {
+    transform: rotateZ(-12deg);
+  }
+}
+*/
+.back-tentacle-left {
+  transform-origin: center center;
+  animation: bob 2s 0.6s infinite alternate;
+}
+@keyframes bob {
+  from {
+    transform: translate(0rem, 1.75rem);
+  }
+  to {
+    transform: translate(0rem, -1rem);
+  }
+}
+
+.back-tentacle-right {
+  border: 1px solid red;
+  transform-origin: center center;
+  animation: bob2 2s infinite alternate;
+}
+@keyframes bob2 {
+  from {
+    transform: translate(0rem, 1.6rem);
+  }
+  to {
+    transform: translate(0rem, -3rem);
+  }
+}
+
+.lower-tentacle-left {
+  transform-box: fill-box;
+  transform-origin: top;
+  animation: woosher 2s 1.2s alternate infinite;
+}
+@keyframes woosher {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(-10deg);
+  }
+}
+
+.lower-tentacle-right {
+  transform-box: fill-box;
+  transform-origin: top;
+  animation: woosher 2s 1.2s alternate infinite;
+}
+@keyframes woosher {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(-10deg);
+  }
+}
+
+.eye-left {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: blink 4s infinite;
+}
+
+.eye-right {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: blink 4s infinite;
+}
+
+@keyframes blink {
+  5% {
+    transform: scaleY(0.1);
+  }
+  7.5% {
+    transform: scaleY(1);
+  }
+  10% {
+    transform: scaleY(0.1);
+  }
+  15%, 100% {
+    transform: scaleY(1);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

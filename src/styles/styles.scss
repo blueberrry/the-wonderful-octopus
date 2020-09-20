@@ -1,0 +1,158 @@
+svg {
+  height: 100vh;
+}
+
+h1 {
+  color: green;
+}
+
+@mixin animateRotateZ($name, $start, $end) {
+  @keyframes #{$name} {
+    0% {
+      transform: rotateZ(#{$start}deg);
+    }
+    100% {
+      transform: rotateZ(#{$end}deg);
+    }
+  }
+}
+
+.left-arm-1 {
+  transform-origin: center center;
+  animation: tentacle1 2s 0.6s infinite alternate;
+  @include animateRotateZ(tentacle1, 3, -12);
+}
+
+.left-arm-2 {
+  transform-origin: center center;
+  animation: tentacle1 2s 0.6s infinite alternate;
+  @include animateRotateZ(tentacle1, 3, -12);
+}
+
+.upper-tentacle {
+  transform-origin: center center;
+  animation: tentacle1 2s infinite alternate;
+  @include animateRotateZ(tentacle1, 0, -12);
+}
+
+.upper-tentacle-right {
+  transform-origin: center center;
+  animation: tentacle1 2s 0.7s infinite alternate;
+  @include animateRotateZ(tentacle1, 0, -7);
+}
+
+// .upper-tentacle-right {
+//   transform-origin: center;
+//   animation: tentacle2 2s infinite alternate;
+//   @include animateRotate();
+// }
+/*
+@keyframes tentacle1 {
+  //   0% {
+  //     transform: rotateZ(0deg);
+  //   }
+
+  //   33% {
+  //     transform: rotateZ(3deg);
+  //   }
+  //   66% {
+  //     transform: rotateZ(-12deg);
+  //   }
+  //   100% {
+  //     tranform: rotateZ(0deg);
+  //   }
+  from {
+    transform: rotateZ(3deg);
+  }
+
+  to {
+    transform: rotateZ(-12deg);
+  }
+}
+*/
+@mixin animateTranslate2D($name, $startX, $startY, $endX, $endY) {
+  @keyframes #{$name} {
+    from {
+      transform: translate(#{$startX}rem, #{$startY}rem);
+    }
+    to {
+      transform: translate(#{$endX}rem, #{$endY}rem);
+    }
+  }
+}
+
+.back-tentacle-left {
+  transform-origin: center center;
+  animation: bob 2s 0.6s infinite alternate;
+  @include animateTranslate2D(bob, 0, 1.75, 0, -1);
+}
+
+.back-tentacle-right {
+  border: 1px solid red;
+  transform-origin: center center;
+  animation: bob2 2s infinite alternate;
+  @include animateTranslate2D(bob2, 0, 1.6, 0, -3);
+}
+
+// .back-tentacle-right {
+//   transform-origin: center center;
+//   animation: bob2 2s infinite alternate;
+//   @include animateTranslate2D(bob2, 0, 12.75, 0, -1.3);
+
+@mixin animateRotate($name, $start, $end) {
+  @keyframes #{$name} {
+    0% {
+      transform: rotateZ(#{$start}deg);
+    }
+    100% {
+      transform: rotateZ(#{$end}deg);
+    }
+  }
+}
+
+.lower-tentacle-left {
+  transform-box: fill-box;
+  transform-origin: top;
+  animation: woosher 2s 1.2s alternate infinite;
+  @include animateRotateZ(woosher, 0, -10);
+}
+
+.lower-tentacle-right {
+  transform-box: fill-box;
+  transform-origin: top;
+  animation: woosher 2s 1.2s alternate infinite;
+  @include animateRotateZ(woosher, 0, -10);
+}
+
+// }
+
+.head {
+}
+
+.eye-left {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: blink 4s infinite;
+}
+
+.eye-right {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: blink 4s infinite;
+}
+
+@keyframes blink {
+  5% {
+    transform: scaleY(0.1);
+  }
+  7.5% {
+    transform: scaleY(1);
+  }
+  10% {
+    transform: scaleY(0.1);
+  }
+  15%,
+  100% {
+    transform: scaleY(1);
+  }
+}
